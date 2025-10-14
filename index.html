@@ -28,170 +28,6 @@
             --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
         }
 
-        .section#about {
-            background: #0b0b0d;
-            padding: 6rem 0;
-            position: relative;
-        }
-
-        .section-title {
-            font-size: 2.8rem;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 4rem;
-            position: relative;
-            color: #ffffff;
-            letter-spacing: -0.02em;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(90deg, #7a3ef8 0%, #00e6ff 100%);
-            border-radius: 2px;
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 5rem;
-            align-items: start;
-            margin-top: 3rem;
-        }
-
-        .about-text {
-            padding-right: 2rem;
-        }
-
-        .about-text p {
-            font-size: 1.15rem;
-            color: #cccccc;
-            line-height: 1.7;
-            margin-bottom: 1.8rem;
-            font-weight: 400;
-            letter-spacing: 0.01em;
-        }
-
-        .about-text p:last-child {
-            margin-bottom: 0;
-        }
-
-        .about-highlights {
-            display: grid;
-            gap: 2rem;
-        }
-
-        .highlight-item {
-            background: #0b0b0d;
-            padding: 2rem;
-            border-radius: 16px;
-            border: 1px solid #7a3ef8;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .highlight-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(122, 62, 248, 0.05) 0%, rgba(0, 230, 255, 0.05) 100%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            pointer-events: none;
-        }
-
-        .highlight-item:hover {
-            transform: translateY(-5px);
-            border-color: #00e6ff;
-            box-shadow: 0 10px 30px rgba(122, 62, 248, 0.2), 0 0 0 1px rgba(0, 230, 255, 0.3);
-        }
-
-        .highlight-item:hover::before {
-            opacity: 1;
-        }
-
-        .highlight-item h4 {
-            color: #00e6ff;
-            margin-bottom: 0.8rem;
-            font-size: 1.2rem;
-            font-weight: 600;
-            letter-spacing: 0.01em;
-        }
-
-        .highlight-item p {
-            color: #cccccc;
-            font-size: 1rem;
-            line-height: 1.6;
-            margin: 0;
-        }
-
-        /* Responsividade */
-        @media (max-width: 1024px) {
-            .about-content {
-                gap: 3rem;
-            }
-
-            .about-text {
-                padding-right: 1rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .about-content {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
-
-            .about-text {
-                padding-right: 0;
-                order: 1;
-            }
-
-            .about-highlights {
-                order: 2;
-            }
-
-            .section-title {
-                font-size: 2.2rem;
-                margin-bottom: 3rem;
-            }
-
-            .about-text p {
-                font-size: 1.1rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .section#about {
-                padding: 4rem 0;
-            }
-
-            .section-title {
-                font-size: 1.8rem;
-            }
-
-            .about-highlights {
-                gap: 1.5rem;
-            }
-
-            .highlight-item {
-                padding: 1.5rem;
-            }
-
-            .highlight-item h4 {
-                font-size: 1.1rem;
-            }
-        }
-
         * {
             margin: 0;
             padding: 0;
@@ -386,6 +222,13 @@
             animation: shimmer 3s infinite;
         }
 
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
         /* Buttons */
         .btn {
             display: inline-flex;
@@ -447,41 +290,57 @@
         }
 
         .section-title {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             font-weight: 700;
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
             position: relative;
+            color: #ffffff;
+            letter-spacing: -0.02em;
         }
 
         .section-title::after {
             content: '';
             position: absolute;
-            bottom: -10px;
+            bottom: -15px;
             left: 50%;
             transform: translateX(-50%);
-            width: 60px;
+            width: 80px;
             height: 4px;
-            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+            background: linear-gradient(90deg, #7a3ef8 0%, #00e6ff 100%);
             border-radius: 2px;
         }
 
-        /* About Section */
+        /* About Section - ATUALIZADO */
+        .section#about {
+            background: #0b0b0d;
+            padding: 6rem 0;
+            position: relative;
+        }
+
         .about-content {
             display: grid;
-            grid-template-columns: 1fr 2fr;
+            grid-template-columns: 1.5fr 1fr;
             gap: 4rem;
-            align-items: center;
+            align-items: start;
+            margin-top: 3rem;
         }
 
         .about-text {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            line-height: 1.8;
+            padding-right: 2rem;
         }
 
         .about-text p {
-            margin-bottom: 1.5rem;
+            font-size: 1.15rem;
+            color: #cccccc;
+            line-height: 1.7;
+            margin-bottom: 1.8rem;
+            font-weight: 400;
+            letter-spacing: 0.01em;
+        }
+
+        .about-text p:last-child {
+            margin-bottom: 0;
         }
 
         .about-highlights {
@@ -490,22 +349,51 @@
         }
 
         .highlight-item {
-            background: var(--bg-card);
+            background: #0b0b0d;
             padding: 1.5rem;
-            border-radius: 15px;
-            border-left: 4px solid var(--accent-primary);
-            transition: var(--transition);
+            border-radius: 16px;
+            border: 1px solid #7a3ef8;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .highlight-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(122, 62, 248, 0.05) 0%, rgba(0, 230, 255, 0.05) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
         }
 
         .highlight-item:hover {
-            transform: translateX(10px);
-            box-shadow: var(--shadow-secondary);
+            transform: translateY(-5px);
+            border-color: #00e6ff;
+            box-shadow: 0 10px 30px rgba(122, 62, 248, 0.2), 0 0 0 1px rgba(0, 230, 255, 0.3);
+        }
+
+        .highlight-item:hover::before {
+            opacity: 1;
         }
 
         .highlight-item h4 {
-            color: var(--accent-primary);
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
+            color: #00e6ff;
+            margin-bottom: 0.6rem;
+            font-size: 1.05rem;
+            font-weight: 600;
+            letter-spacing: 0.01em;
+        }
+
+        .highlight-item p {
+            color: #cccccc;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin: 0;
         }
 
         /* Projects Section */
@@ -518,7 +406,7 @@
         .project-card {
             background: var(--bg-card);
             border-radius: 20px;
-            padding: 2rem;
+            padding: 0;
             transition: var(--transition);
             position: relative;
             overflow: hidden;
@@ -533,11 +421,49 @@
             width: 100%;
             height: 4px;
             background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+            z-index: 1;
         }
 
         .project-card:hover {
             transform: translateY(-10px);
             box-shadow: var(--shadow-primary);
+        }
+
+        .project-preview {
+            width: 100%;
+            height: 280px;
+            overflow: hidden;
+            position: relative;
+            background: #1a1a1a;
+            border-radius: 20px 20px 0 0;
+        }
+
+        .project-preview img,
+        .project-preview video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .project-card:hover .project-preview img,
+        .project-card:hover .project-preview video {
+            transform: scale(1.05);
+        }
+
+        .project-preview::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+            background: linear-gradient(to top, rgba(10, 10, 10, 0.8), transparent);
+            pointer-events: none;
+        }
+
+        .project-content {
+            padding: 2rem;
         }
 
         .project-header {
@@ -591,6 +517,7 @@
         .project-links {
             display: flex;
             gap: 1rem;
+            flex-wrap: wrap;
         }
 
         .project-link {
@@ -646,6 +573,10 @@
 
         .skills-group {
             margin-bottom: 2rem;
+        }
+
+        .skills-group:last-child {
+            margin-bottom: 0;
         }
 
         .skills-group h4 {
@@ -954,6 +885,16 @@
         }
 
         /* Responsive Design */
+        @media (max-width: 1024px) {
+            .about-content {
+                gap: 3rem;
+            }
+
+            .about-text {
+                padding-right: 1rem;
+            }
+        }
+
         @media (max-width: 768px) {
             .nav-menu {
                 display: none;
@@ -998,7 +939,16 @@
 
             .about-content {
                 grid-template-columns: 1fr;
-                gap: 2rem;
+                gap: 3rem;
+            }
+
+            .about-text {
+                padding-right: 0;
+                order: 1;
+            }
+
+            .about-highlights {
+                order: 2;
             }
 
             .skills-container {
@@ -1019,6 +969,15 @@
                 width: 100%;
                 max-width: 300px;
             }
+
+            .section-title {
+                font-size: 2.2rem;
+                margin-bottom: 3rem;
+            }
+
+            .about-text p {
+                font-size: 1.1rem;
+            }
         }
 
         @media (max-width: 480px) {
@@ -1031,7 +990,7 @@
             }
 
             .section-title {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
 
             .hero-buttons {
@@ -1049,6 +1008,22 @@
 
             .project-link {
                 justify-content: center;
+            }
+
+            .section#about {
+                padding: 4rem 0;
+            }
+
+            .about-highlights {
+                gap: 1.5rem;
+            }
+
+            .highlight-item {
+                padding: 1.5rem;
+            }
+
+            .highlight-item h4 {
+                font-size: 1rem;
             }
         }
     </style>
@@ -1087,7 +1062,7 @@
                 </p>
                 <div class="hero-buttons">
                     <a href="https://drive.google.com/file/d/1mCuEEYnWHYuJf0oR580omlg4QJTIRD8D/view?usp=sharing"
-                        class="btn btn-primary">
+                        class="btn btn-primary" target="_blank">
                         Download CV <i class="fas fa-download"></i>
                     </a>
                     <a href="#contact" class="btn btn-secondary">
@@ -1097,9 +1072,8 @@
             </div>
             <div class="hero-image">
                 <div class="avatar">
-                    <i class="fas fa-user"> <img
-                            src="https://i.ibb.co/5hpzDchK/Imagem-do-Whats-App-de-2025-09-22-s-22-23-41-4df43496.jpg"
-                            alt="" style="width: 500px;"></i>
+                    <img src="https://i.ibb.co/5hpzDchK/Imagem-do-Whats-App-de-2025-09-22-s-22-23-41-4df43496.jpg"
+                        alt="Matheus Pereira Xavier">
                 </div>
             </div>
         </div>
@@ -1112,28 +1086,32 @@
             <div class="about-content">
                 <div class="about-text fade-in">
                     <p>
-                        Minha relação com a tecnologia começou cedo, movida por uma curiosidade quase infantil: “como será que tudo isso funciona por trás da tela?”. Essa curiosidade me levou a cursar Análise e Desenvolvimento de Sistemas, conciliando os estudos com o trabalho — o que me ensinou muito sobre resiliência, foco e priorização (e também sobre o poder do café ☕).
+                        Minha relação com a tecnologia começou cedo, movida por uma curiosidade quase infantil: "como será que tudo isso funciona por trás da tela?". Essa curiosidade me levou a cursar Análise e Desenvolvimento de Sistemas, conciliando os estudos com o trabalho — o que me ensinou muito sobre resiliência, foco e priorização (e também sobre o poder do café ☕).
                     </p>
                     <p>
-                      Mesmo tendo seguido outros caminhos por um tempo, a vontade de voltar para a área de tecnologia nunca deixou de pulsar. Em 2025, decidi me reconectar com esse propósito e mergulhei no bootcamp da Generation Brasil, uma experiência intensa que uniu técnica, colaboração e autoconhecimento.
-                      Durante o programa, trabalhei em projetos Full Stack com React, TypeScript e NestJS, enfrentando desafios técnicos e pessoais que fortaleceram ainda mais minha vontade de evoluir como desenvolvedor.
+                        Mesmo tendo seguido outros caminhos por um tempo, a vontade de voltar para a área de tecnologia nunca deixou de pulsar. Em 2025, decidi me reconectar com esse propósito e mergulhei no bootcamp da Generation Brasil, uma experiência intensa que uniu técnica, colaboração e autoconhecimento.
+                        Durante o programa, trabalhei em projetos Full Stack com React, TypeScript e NestJS, enfrentando desafios técnicos e pessoais que fortaleceram ainda mais minha vontade de evoluir como desenvolvedor.
                     </p>
                     <p>
-                       Hoje, me considero um profissional em constante crescimento, que acredita que código não é só sobre lógica  é sobre solucionar problemas e gerar impacto real. Busco minha primeira oportunidade como desenvolvedor júnior, pronto para aprender, contribuir e, claro, escrever novas linhas de código (e de história).
+                        Hoje, me considero um profissional em constante crescimento, que acredita que código não é só sobre lógica — é sobre solucionar problemas e gerar impacto real. Busco minha primeira oportunidade como desenvolvedor júnior, pronto para aprender, contribuir e, claro, escrever novas linhas de código (e de história).
                     </p>
                 </div>
                 <div class="about-highlights fade-in">
                     <div class="highlight-item">
-                        <h4>Formação Acadêmica</h4>
-                        <p>Análise e Desenvolvimento de Sistemas com foco em tecnologias modernas</p>
+                        <h4> Formação Acadêmica</h4>
+                        <p>Análise e Desenvolvimento de Sistemas</p>
                     </div>
                     <div class="highlight-item">
-                        <h4>Bootcamp Generation</h4>
-                        <p>Programa intensivo de desenvolvimento Full Stack com metodologias ágeis</p>
+                        <h4> Bootcamp Generation Brasil</h4>
+                        <p>Desenvolvimento Full Stack - 2025</p>
                     </div>
                     <div class="highlight-item">
-                        <h4>Objetivo Profissional</h4>
-                        <p>Desenvolvedor Júnior em busca da primeira oportunidade no mercado tech</p>
+                        <h4> Fundamentos de Front-End</h4>
+                        <p>Descomplica Faculdade Digital - 2023</p>
+                    </div>
+                    <div class="highlight-item">
+                        <h4> Objetivo Profissional</h4>
+                        <p>Desenvolvedor Júnior Full Stack</p>
                     </div>
                 </div>
             </div>
@@ -1146,76 +1124,92 @@
             <h2 class="section-title fade-in">Meus Projetos</h2>
             <div class="projects-grid">
                 <div class="project-card fade-in">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <div>
-                            <h3 class="project-title">Nexo Seguros</h3>
-                        </div>
+                    <div class="project-preview">
+                        <img src="https://via.placeholder.com/600x400/8b5cf6/ffffff?text=Nexo+Seguros+Preview" 
+                             alt="Preview Nexo Seguros">
+                        <!-- Substitua pelo seu GIF ou imagem real: 
+                        <img src="caminho/para/nexo-seguros-demo.gif" alt="Demo Nexo Seguros"> -->
                     </div>
-                    <p class="project-description">
-                        Plataforma de gerenciamento de seguros automotivos com funcionalidades para cadastro,
-                        atualização, exclusão e consulta de veículos e planos de seguro. Sistema completo com
-                        autenticação, dashboards exclusivos e documentação profissional.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">NestJS</span>
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">Tailwind CSS</span>
-                        <span class="tech-tag">API REST</span>
-                        <span class="tech-tag">Swagger</span>
-                        <span class="tech-tag">bcrypt</span>
-                        <span class="tech-tag">Figma</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://nexoseguro.netlify.app" target="_blank" class="project-link">
-                            <i class="fas fa-external-link-alt"></i> Ver Aplicaçãp
-                        </a>
-                        <a href="https://github.com/Grupo-05-Turma-JavaScript-08/nexo_front" target="_blank"
-                            class="project-link">
-                            <i class="fab fa-github"></i> Front-End
-                        </a>
-                        <a href="https://github.com/Grupo-05-Turma-JavaScript-08/nexo_back" target="_blank"
-                            class="project-link">
-                            <i class="fab fa-github"></i> Back-End
-                        </a>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <div class="project-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div>
+                                <h3 class="project-title">Nexo Seguros</h3>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            Plataforma de gerenciamento de seguros automotivos com funcionalidades para cadastro,
+                            atualização, exclusão e consulta de veículos e planos de seguro. Sistema completo com
+                            autenticação, dashboards exclusivos e documentação profissional.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">NestJS</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Tailwind CSS</span>
+                            <span class="tech-tag">API REST</span>
+                            <span class="tech-tag">Swagger</span>
+                            <span class="tech-tag">bcrypt</span>
+                            <span class="tech-tag">Figma</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://nexoseguro.netlify.app" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Ver Aplicação
+                            </a>
+                            <a href="https://github.com/Grupo-05-Turma-JavaScript-08/nexo_front" target="_blank"
+                                class="project-link">
+                                <i class="fab fa-github"></i> Front-End
+                            </a>
+                            <a href="https://github.com/Grupo-05-Turma-JavaScript-08/nexo_back" target="_blank"
+                                class="project-link">
+                                <i class="fab fa-github"></i> Back-End
+                            </a>
+                        </div>
                     </div>
                 </div>
 
                 <div class="project-card fade-in">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-blog"></i>
-                        </div>
-                        <div>
-                            <h3 class="project-title">Blog Pessoal</h3>
-                        </div>
+                    <div class="project-preview">
+                        <img src="https://via.placeholder.com/600x400/a855f7/ffffff?text=Blog+Pessoal+Preview" 
+                             alt="Preview Blog Pessoal">
+                        <!-- Substitua pelo seu GIF ou imagem real: 
+                        <img src="caminho/para/blog-pessoal-demo.gif" alt="Demo Blog Pessoal"> -->
                     </div>
-                    <p class="project-description">
-                        Plataforma web para postagens e temas com CRUD completo, autenticação JWT e consumo de API.
-                        Interface moderna com feedback visual e experiência de usuário otimizada. Deploy funcional
-                        com integração completa entre frontend e backend.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">TypeScript</span>
-                        <span class="tech-tag">Vite</span>
-                        <span class="tech-tag">Tailwind CSS</span>
-                        <span class="tech-tag">NestJS</span>
-                        <span class="tech-tag">JWT</span>
-                        <span class="tech-tag">Axios</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://blogpessoal-react-six.vercel.app/" target="_blank" class="project-link">
-                            <i class="fas fa-external-link-alt"></i> Ver Aplicaçãp
-                        </a>
-                        <a href="https://github.com/Matheus97px/blogpessoal_react" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i> Front-End
-                        </a>
-                        <a href="https://github.com/Matheus97px/blogpessoal" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i> Back-End
-                        </a>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <div class="project-icon">
+                                <i class="fas fa-blog"></i>
+                            </div>
+                            <div>
+                                <h3 class="project-title">Blog Pessoal</h3>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            Plataforma web para postagens e temas com CRUD completo, autenticação JWT e consumo de API.
+                            Interface moderna com feedback visual e experiência de usuário otimizada. Deploy funcional
+                            com integração completa entre frontend e backend.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Vite</span>
+                            <span class="tech-tag">Tailwind CSS</span>
+                            <span class="tech-tag">NestJS</span>
+                            <span class="tech-tag">JWT</span>
+                            <span class="tech-tag">Axios</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://blogpessoal-react-six.vercel.app/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Ver Aplicação
+                            </a>
+                            <a href="https://github.com/Matheus97px/blogpessoal_react" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Front-End
+                            </a>
+                            <a href="https://github.com/Matheus97px/blogpessoal" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Back-End
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1298,12 +1292,8 @@
                         <li>Foco em resultados e resolução de problemas</li>
                         <li>Adaptabilidade e curiosidade tecnológica</li>
                         <li>Autogestão e responsabilidade com prazos</li>
-                        <li>Resiliência diante de desafios e feedbacks</li>
-                        <li>Empatia e respeito nas relações de equipe</li>
-                        <li>Pensamento crítico e visão sistêmica</li>
-                        <li>Criatividade para resolução de problemas</li>
-                        <li>Organização e foco em resultados</li>
-                        <li>Comprometimento com qualidade e boas práticas</li>
+                        <li>Resiliência diante de desafios</li>
+                        <li>Empatia e colaboração</li>
                     </ul>
                 </div>
             </div>
@@ -1316,7 +1306,6 @@
             <h2 class="section-title fade-in">Depoimentos</h2>
             <div class="testimonial-carousel-wrapper">
                 <div class="testimonial-carousel">
-                    <!-- Slide 1 -->
                     <div class="testimonial-slide">
                         <div class="testimonial-card">
                             <div class="testimonial-text">
@@ -1335,7 +1324,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Slide 2 (Placeholder) -->
                     <div class="testimonial-slide">
                         <div class="testimonial-card">
                             <div class="testimonial-text">
@@ -1343,11 +1331,9 @@
                                 <p>Trabalhar com o Matheus na Code7 foi uma experiência muito positiva. Ele se destaca
                                     não apenas pelo domínio técnico em Front-end e Back-End, mas também pela agilidade e
                                     disponibilidade em colaborar com o time, sempre pronto para ajudar, independente do
-                                    horário.
-                                    Sua comunicação clara, comprometimento e velocidade em resolver demandas tornam o
-                                    trabalho em equipe mais fluido e produtivo.
-                                    Matheus é aquele tipo de profissional que transmite confiança e está sempre em busca
-                                    de soluções, somando técnica, proatividade e espírito de equipe.!</p>
+                                    horário. Sua comunicação clara, comprometimento e velocidade em resolver demandas tornam o
+                                    trabalho em equipe mais fluido e produtivo. Matheus é aquele tipo de profissional que transmite confiança e está sempre em busca
+                                    de soluções, somando técnica, proatividade e espírito de equipe!</p>
                             </div>
                             <div class="testimonial-author">
                                 <div class="author-info">
@@ -1360,9 +1346,7 @@
                 </div>
                 <button class="carousel-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
                 <button class="carousel-btn next-btn"><i class="fas fa-chevron-right"></i></button>
-                <div class="carousel-dots">
-                    <!-- Dots will be generated by JS -->
-                </div>
+                <div class="carousel-dots"></div>
             </div>
         </div>
     </section>
@@ -1399,7 +1383,6 @@
                         <div class="contact-value">matheuspx97</div>
                     </a>
                 </div>
-
             </div>
         </div>
     </section>
@@ -1412,7 +1395,6 @@
     </footer>
 
     <script>
-        // Navbar scroll effect
         window.addEventListener('scroll', () => {
             const navbar = document.getElementById('navbar');
             if (window.scrollY > 100) {
@@ -1422,7 +1404,6 @@
             }
         });
 
-        // Mobile menu toggle
         const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
         const navMenu = document.getElementById('nav-menu');
 
@@ -1438,18 +1419,15 @@
             }
         });
 
-        // Active navigation link
         const sections = document.querySelectorAll('section[id]');
         const navLinks = document.querySelectorAll('.nav-link');
 
         function setActiveNavLink() {
             const scrollY = window.pageYOffset;
-
             sections.forEach(current => {
                 const sectionHeight = current.offsetHeight;
                 const sectionTop = current.offsetTop - 100;
                 const sectionId = current.getAttribute('id');
-
                 if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
                     navLinks.forEach(link => {
                         link.classList.remove('active');
@@ -1463,7 +1441,6 @@
 
         window.addEventListener('scroll', setActiveNavLink);
 
-        // Close mobile menu when clicking on links
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('active');
@@ -1473,7 +1450,6 @@
             });
         });
 
-        // Scroll reveal animation
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -1487,12 +1463,10 @@
             });
         }, observerOptions);
 
-        // Observe all fade-in elements
         document.querySelectorAll('.fade-in').forEach(el => {
             observer.observe(el);
         });
 
-        // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -1506,21 +1480,9 @@
             });
         });
 
-        // Download CV functionality (placeholder)
-        document.querySelectorAll('a[href="#contact"]').forEach(link => {
-            if (link.textContent.includes('Download CV')) {
-                link.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    alert('CV download seria implementado aqui. Por enquanto, entre em contato pelo email!');
-                });
-            }
-        });
-
-        // Add typing animation to hero title
         function typeWriter(element, text, speed = 100) {
             let i = 0;
             element.innerHTML = '';
-
             function type() {
                 if (i < text.length) {
                     element.innerHTML += text.charAt(i);
@@ -1528,22 +1490,18 @@
                     setTimeout(type, speed);
                 }
             }
-
             setTimeout(type, 1000);
         }
 
-        // Initialize typing animation when page loads
         window.addEventListener('load', () => {
             const heroTitle = document.querySelector('.hero-title');
             const originalText = heroTitle.textContent;
             typeWriter(heroTitle, originalText, 80);
         });
 
-        // Add particle effect to hero section
         function createParticle() {
             const hero = document.querySelector('.hero');
             const particle = document.createElement('div');
-
             particle.style.position = 'absolute';
             particle.style.width = '4px';
             particle.style.height = '4px';
@@ -1551,38 +1509,20 @@
             particle.style.borderRadius = '50%';
             particle.style.pointerEvents = 'none';
             particle.style.opacity = '0.6';
-
             const startX = Math.random() * window.innerWidth;
             const startY = Math.random() * window.innerHeight;
-
             particle.style.left = startX + 'px';
             particle.style.top = startY + 'px';
-
             hero.appendChild(particle);
-
             const animation = particle.animate([
-                {
-                    transform: 'translate(0, 0) scale(1)',
-                    opacity: 0.6
-                },
-                {
-                    transform: `translate(${(Math.random() - 0.5) * 200}px, ${(Math.random() - 0.5) * 200}px) scale(0)`,
-                    opacity: 0
-                }
-            ], {
-                duration: 3000,
-                easing: 'ease-out'
-            });
-
-            animation.onfinish = () => {
-                particle.remove();
-            };
+                { transform: 'translate(0, 0) scale(1)', opacity: 0.6 },
+                { transform: `translate(${(Math.random() - 0.5) * 200}px, ${(Math.random() - 0.5) * 200}px) scale(0)`, opacity: 0 }
+            ], { duration: 3000, easing: 'ease-out' });
+            animation.onfinish = () => particle.remove();
         }
 
-        // Create particles periodically
         setInterval(createParticle, 2000);
 
-        // Testimonial Carousel
         const carouselContainer = document.querySelector('.testimonial-carousel');
         if (carouselContainer) {
             const slides = Array.from(carouselContainer.children);
@@ -1591,7 +1531,6 @@
             const dotsContainer = document.querySelector('.testimonial-carousel-wrapper .carousel-dots');
             let currentIndex = 0;
 
-            // Create dots
             if (dotsContainer) {
                 slides.forEach((_, i) => {
                     const dot = document.createElement('button');
@@ -1605,16 +1544,11 @@
             const dots = dotsContainer ? Array.from(dotsContainer.children) : [];
 
             const updateCarousel = () => {
-                // Move slides
                 carouselContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
-
-                // Update dots
                 if (dots.length > 0) {
                     dots.forEach(dot => dot.classList.remove('active'));
                     dots[currentIndex].classList.add('active');
                 }
-
-                // Update buttons
                 if (prevButton) prevButton.style.visibility = currentIndex === 0 ? 'hidden' : 'visible';
                 if (nextButton) nextButton.style.visibility = currentIndex >= slides.length - 1 ? 'hidden' : 'visible';
             };
@@ -1646,16 +1580,13 @@
                 });
             }
 
-            // Initialize
             updateCarousel();
         }
 
-        // Add parallax effect to hero section
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
             const heroContainer = document.querySelector('.hero-container');
             const parallax = scrolled * 0.5;
-
             if (heroContainer) {
                 heroContainer.style.transform = `translateY(${parallax}px)`;
             }
