@@ -135,12 +135,13 @@
             background-position: center;
             background-attachment: fixed;
             overflow: hidden;
+            padding-top: 80px;
         }
 
         .hero-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 2rem;
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
@@ -152,14 +153,14 @@
         }
 
         .hero-greeting {
-            font-size: 1.2rem;
+            font-size: clamp(1rem, 3vw, 1.2rem);
             color: var(--accent-primary);
             margin-bottom: 1rem;
             font-weight: 500;
         }
 
         .hero-title {
-            font-size: 3.5rem;
+            font-size: clamp(2rem, 5vw, 3.5rem);
             font-weight: 700;
             margin-bottom: 1rem;
             background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-tertiary) 100%);
@@ -170,22 +171,22 @@
         }
 
         .hero-subtitle {
-            font-size: 1.5rem;
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
             color: var(--accent-secondary);
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
             font-weight: 600;
         }
 
         .hero-description {
-            font-size: 1.1rem;
+            font-size: clamp(1rem, 2vw, 1.1rem);
             color: var(--text-secondary);
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
             line-height: 1.8;
         }
 
         .hero-buttons {
             display: flex;
-            gap: 1.5rem;
+            gap: 1rem;
             flex-wrap: wrap;
         }
 
@@ -197,8 +198,8 @@
         }
 
         .avatar {
-            width: 300px;
-            height: 300px;
+            width: clamp(200px, 40vw, 300px);
+            height: clamp(200px, 40vw, 300px);
             border-radius: 50%;
             background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
             display: flex;
@@ -234,9 +235,9 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 1rem 2rem;
+            padding: clamp(0.8rem, 2vw, 1rem) clamp(1.5rem, 3vw, 2rem);
             border-radius: 50px;
-            font-size: 1rem;
+            font-size: clamp(0.9rem, 2vw, 1rem);
             font-weight: 600;
             text-decoration: none;
             transition: var(--transition);
@@ -275,7 +276,7 @@
 
         /* Sections */
         .section {
-            padding: 6rem 0;
+            padding: clamp(3rem, 8vw, 6rem) 0;
             position: relative;
         }
 
@@ -286,14 +287,14 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 clamp(1rem, 3vw, 2rem);
         }
 
         .section-title {
-            font-size: 2.8rem;
+            font-size: clamp(2rem, 5vw, 2.8rem);
             font-weight: 700;
             text-align: center;
-            margin-bottom: 4rem;
+            margin-bottom: clamp(2rem, 5vw, 4rem);
             position: relative;
             color: #ffffff;
             letter-spacing: -0.02em;
@@ -311,17 +312,17 @@
             border-radius: 2px;
         }
 
-        /* About Section - ATUALIZADO */
+        /* About Section */
         .section#about {
             background: #0b0b0d;
-            padding: 6rem 0;
+            padding: clamp(3rem, 8vw, 6rem) 0;
             position: relative;
         }
 
         .about-content {
             display: grid;
             grid-template-columns: 1.5fr 1fr;
-            gap: 4rem;
+            gap: clamp(2rem, 5vw, 4rem);
             align-items: start;
             margin-top: 3rem;
         }
@@ -331,7 +332,7 @@
         }
 
         .about-text p {
-            font-size: 1.15rem;
+            font-size: clamp(1rem, 2vw, 1.15rem);
             color: #cccccc;
             line-height: 1.7;
             margin-bottom: 1.8rem;
@@ -350,7 +351,7 @@
 
         .highlight-item {
             background: #0b0b0d;
-            padding: 1.5rem;
+            padding: clamp(1rem, 3vw, 1.5rem);
             border-radius: 16px;
             border: 1px solid #7a3ef8;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -384,14 +385,14 @@
         .highlight-item h4 {
             color: #00e6ff;
             margin-bottom: 0.6rem;
-            font-size: 1.05rem;
+            font-size: clamp(0.95rem, 2vw, 1.05rem);
             font-weight: 600;
             letter-spacing: 0.01em;
         }
 
         .highlight-item p {
             color: #cccccc;
-            font-size: 0.95rem;
+            font-size: clamp(0.85rem, 2vw, 0.95rem);
             line-height: 1.5;
             margin: 0;
         }
@@ -399,8 +400,8 @@
         /* Projects Section */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
+            gap: clamp(1.5rem, 3vw, 2rem);
         }
 
         .project-card {
@@ -431,7 +432,7 @@
 
         .project-preview {
             width: 100%;
-            height: 280px;
+            height: clamp(200px, 40vw, 280px);
             overflow: hidden;
             position: relative;
             background: #1a1a1a;
@@ -463,7 +464,7 @@
         }
 
         .project-content {
-            padding: 2rem;
+            padding: clamp(1.5rem, 3vw, 2rem);
         }
 
         .project-header {
@@ -473,20 +474,28 @@
         }
 
         .project-icon {
-            width: 50px;
-            height: 50px;
+            width: clamp(40px, 8vw, 50px);
+            height: clamp(40px, 8vw, 50px);
             background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
             border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             margin-right: 1rem;
-            font-size: 1.5rem;
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
             color: white;
+            flex-shrink: 0;
+        }
+
+        .project-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20%;
         }
 
         .project-title {
-            font-size: 1.4rem;
+            font-size: clamp(1.2rem, 3vw, 1.4rem);
             font-weight: 600;
             margin-bottom: 0.5rem;
         }
@@ -495,6 +504,7 @@
             color: var(--text-secondary);
             margin-bottom: 2rem;
             line-height: 1.6;
+            font-size: clamp(0.9rem, 2vw, 1rem);
         }
 
         .project-tech {
@@ -509,7 +519,7 @@
             color: var(--accent-primary);
             padding: 0.3rem 0.8rem;
             border-radius: 15px;
-            font-size: 0.85rem;
+            font-size: clamp(0.75rem, 2vw, 0.85rem);
             font-weight: 500;
             border: 1px solid rgba(139, 92, 246, 0.3);
         }
@@ -528,7 +538,7 @@
             color: var(--text-primary);
             text-decoration: none;
             border-radius: 10px;
-            font-size: 0.9rem;
+            font-size: clamp(0.8rem, 2vw, 0.9rem);
             font-weight: 500;
             transition: var(--transition);
             border: 1px solid var(--border-color);
@@ -547,19 +557,19 @@
         /* Skills Section */
         .skills-container {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
+            gap: clamp(2rem, 5vw, 4rem);
         }
 
         .skills-category {
             background: var(--bg-card);
-            padding: 2.5rem;
+            padding: clamp(1.5rem, 4vw, 2.5rem);
             border-radius: 20px;
             border: 1px solid var(--border-color);
         }
 
         .skills-category h3 {
-            font-size: 1.5rem;
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
             margin-bottom: 2rem;
             color: var(--accent-primary);
             display: flex;
@@ -568,7 +578,7 @@
 
         .skills-category h3 i {
             margin-right: 1rem;
-            font-size: 1.8rem;
+            font-size: clamp(1.5rem, 3vw, 1.8rem);
         }
 
         .skills-group {
@@ -582,7 +592,7 @@
         .skills-group h4 {
             color: var(--text-primary);
             margin-bottom: 1rem;
-            font-size: 1.1rem;
+            font-size: clamp(1rem, 2vw, 1.1rem);
         }
 
         .skills-list {
@@ -596,7 +606,7 @@
             color: var(--text-secondary);
             padding: 0.5rem 1rem;
             border-radius: 25px;
-            font-size: 0.9rem;
+            font-size: clamp(0.8rem, 2vw, 0.9rem);
             font-weight: 500;
             transition: var(--transition);
             border: 1px solid var(--border-color);
@@ -619,6 +629,7 @@
             transition: var(--transition);
             display: flex;
             align-items: center;
+            font-size: clamp(0.9rem, 2vw, 1rem);
         }
 
         .soft-skills-list li:last-child {
@@ -636,6 +647,7 @@
             font-weight: bold;
             margin-right: 1rem;
             font-size: 1.2rem;
+            flex-shrink: 0;
         }
 
         /* Testimonials Section */
@@ -660,7 +672,7 @@
 
         .testimonial-card {
             background: var(--bg-card);
-            padding: 2.5rem;
+            padding: clamp(1.5rem, 4vw, 2.5rem);
             border-radius: 20px;
             border-left: 5px solid var(--accent-primary);
             box-shadow: var(--shadow-secondary);
@@ -671,7 +683,7 @@
         }
 
         .testimonial-text {
-            font-size: 1.1rem;
+            font-size: clamp(1rem, 2vw, 1.1rem);
             color: var(--text-secondary);
             line-height: 1.8;
             margin-bottom: 2rem;
@@ -681,7 +693,7 @@
 
         .testimonial-text .fa-quote-left {
             color: var(--accent-primary);
-            font-size: 2rem;
+            font-size: clamp(1.5rem, 3vw, 2rem);
             margin-bottom: 1rem;
             display: block;
         }
@@ -692,13 +704,13 @@
         }
 
         .author-name {
-            font-size: 1.2rem;
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
             font-weight: 600;
             color: var(--text-primary);
         }
 
         .author-title {
-            font-size: 0.9rem;
+            font-size: clamp(0.8rem, 2vw, 0.9rem);
             color: var(--text-muted);
         }
 
@@ -764,7 +776,7 @@
         }
 
         .contact-description {
-            font-size: 1.2rem;
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
             color: var(--text-secondary);
             margin-bottom: 3rem;
             line-height: 1.6;
@@ -773,22 +785,25 @@
         .contact-links {
             display: flex;
             justify-content: center;
-            gap: 2rem;
+            gap: clamp(1rem, 3vw, 2rem);
             margin-bottom: 3rem;
+            flex-wrap: wrap;
         }
 
         .contact-link {
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 2rem;
+            padding: clamp(1.5rem, 3vw, 2rem);
             background: var(--bg-card);
             border-radius: 20px;
             text-decoration: none;
             color: var(--text-primary);
             transition: var(--transition);
             border: 1px solid var(--border-color);
-            min-width: 150px;
+            min-width: clamp(120px, 25vw, 150px);
+            flex: 1 1 auto;
+            max-width: 250px;
         }
 
         .contact-link:hover {
@@ -798,15 +813,15 @@
         }
 
         .contact-icon {
-            width: 60px;
-            height: 60px;
+            width: clamp(50px, 10vw, 60px);
+            height: clamp(50px, 10vw, 60px);
             background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             margin-bottom: 1rem;
-            font-size: 1.5rem;
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
             color: white;
         }
 
@@ -818,11 +833,13 @@
         .contact-label {
             font-weight: 600;
             margin-bottom: 0.5rem;
+            font-size: clamp(0.9rem, 2vw, 1rem);
         }
 
         .contact-value {
             color: var(--text-muted);
-            font-size: 0.9rem;
+            font-size: clamp(0.75rem, 2vw, 0.9rem);
+            word-break: break-word;
         }
 
         /* Footer */
@@ -835,6 +852,7 @@
 
         .footer p {
             color: var(--text-muted);
+            font-size: clamp(0.85rem, 2vw, 1rem);
         }
 
         /* Animations */
@@ -893,9 +911,17 @@
             .about-text {
                 padding-right: 1rem;
             }
+
+            .hero {
+                background-attachment: scroll;
+            }
         }
 
         @media (max-width: 768px) {
+            .nav-container {
+                padding: 0 1rem;
+            }
+
             .nav-menu {
                 display: none;
                 position: absolute;
@@ -921,25 +947,16 @@
                 grid-template-columns: 1fr;
                 text-align: center;
                 gap: 2rem;
-            }
-
-            .hero-title {
-                font-size: 2.5rem;
+                padding: 1rem;
             }
 
             .hero-buttons {
                 justify-content: center;
             }
 
-            .avatar {
-                width: 250px;
-                height: 250px;
-                font-size: 3rem;
-            }
-
             .about-content {
                 grid-template-columns: 1fr;
-                gap: 3rem;
+                gap: 2rem;
             }
 
             .about-text {
@@ -951,55 +968,44 @@
                 order: 2;
             }
 
-            .skills-container {
-                grid-template-columns: 1fr;
-                gap: 2rem;
+            .carousel-btn {
+                width: 36px;
+                height: 36px;
+                font-size: 1.2rem;
             }
 
-            .projects-grid {
-                grid-template-columns: 1fr;
+            .prev-btn {
+                left: 0.5rem;
             }
 
-            .contact-links {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .contact-link {
-                width: 100%;
-                max-width: 300px;
-            }
-
-            .section-title {
-                font-size: 2.2rem;
-                margin-bottom: 3rem;
-            }
-
-            .about-text p {
-                font-size: 1.1rem;
+            .next-btn {
+                right: 0.5rem;
             }
         }
 
         @media (max-width: 480px) {
-            .container {
-                padding: 0 1rem;
+            .nav-logo {
+                font-size: 1.2rem;
             }
 
-            .hero-title {
-                font-size: 2rem;
+            .hero {
+                min-height: auto;
+                padding: 100px 0 50px;
             }
 
-            .section-title {
-                font-size: 1.8rem;
+            .hero-container {
+                gap: 2rem;
             }
 
             .hero-buttons {
                 flex-direction: column;
                 width: 100%;
+                gap: 1rem;
             }
 
             .btn {
                 width: 100%;
+                justify-content: center;
             }
 
             .project-links {
@@ -1008,22 +1014,53 @@
 
             .project-link {
                 justify-content: center;
+                width: 100%;
             }
 
-            .section#about {
-                padding: 4rem 0;
+            .contact-links {
+                flex-direction: column;
+                align-items: stretch;
             }
 
-            .about-highlights {
-                gap: 1.5rem;
+            .contact-link {
+                width: 100%;
+                max-width: 100%;
             }
 
-            .highlight-item {
-                padding: 1.5rem;
-            }
-
-            .highlight-item h4 {
+            .carousel-btn {
+                width: 32px;
+                height: 32px;
                 font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .container {
+                padding: 0 0.75rem;
+            }
+
+            .nav-container {
+                padding: 0 0.75rem;
+            }
+
+            .hero-container {
+                padding: 0.75rem;
+            }
+
+            .project-content {
+                padding: 1.25rem;
+            }
+
+            .skills-category {
+                padding: 1.25rem;
+            }
+
+            .testimonial-card {
+                padding: 1.25rem;
+            }
+
+            .contact-link {
+                padding: 1.25rem;
             }
         }
     </style>
@@ -1086,14 +1123,14 @@
             <div class="about-content">
                 <div class="about-text fade-in">
                     <p>
-                        Minha relação com a tecnologia começou cedo, movida por uma curiosidade quase infantil: "como será que tudo isso funciona por trás da tela?". Essa curiosidade me levou a cursar Análise e Desenvolvimento de Sistemas, conciliando os estudos com o trabalho — o que me ensinou muito sobre resiliência, foco e priorização (e também sobre o poder do café ☕).
+                        Minha relação com a tecnologia começou cedo, movida por uma curiosidade quase infantil: "como será que tudo isso funciona por trás da tela?". Essa curiosidade me levou a cursar Análise e Desenvolvimento de Sistemas, conciliando os estudos com o trabalho  o que me ensinou muito sobre resiliência, foco e priorização (e também sobre o poder do café ☕).
                     </p>
                     <p>
                         Mesmo tendo seguido outros caminhos por um tempo, a vontade de voltar para a área de tecnologia nunca deixou de pulsar. Em 2025, decidi me reconectar com esse propósito e mergulhei no bootcamp da Generation Brasil, uma experiência intensa que uniu técnica, colaboração e autoconhecimento.
                         Durante o programa, trabalhei em projetos Full Stack com React, TypeScript e NestJS, enfrentando desafios técnicos e pessoais que fortaleceram ainda mais minha vontade de evoluir como desenvolvedor.
                     </p>
                     <p>
-                        Hoje, me considero um profissional em constante crescimento, que acredita que código não é só sobre lógica — é sobre solucionar problemas e gerar impacto real. Busco minha primeira oportunidade como desenvolvedor júnior, pronto para aprender, contribuir e, claro, escrever novas linhas de código (e de história).
+                        Hoje, me considero um profissional em constante crescimento, que acredita que código não é só sobre lógica  é sobre solucionar problemas e gerar impacto real. Busco minha primeira oportunidade como desenvolvedor júnior, pronto para aprender, contribuir e, claro, escrever novas linhas de código (e de história).
                     </p>
                 </div>
                 <div class="about-highlights fade-in">
@@ -1127,13 +1164,11 @@
                     <div class="project-preview">
                         <img src="https://i.ibb.co/nsDfJSyf/Whats-App-Video-2025-09-26-at-12-02-12-1.gif" 
                              alt="Preview Nexo Seguros">
-                        <!-- Substitua pelo seu GIF ou imagem real: 
-                        <img src="caminho/para/nexo-seguros-demo.gif" alt="Demo Nexo Seguros"> -->
                     </div>
                     <div class="project-content">
                         <div class="project-header">
                             <div class="project-icon">
-                               <img src="https://i.ibb.co/Kz9RnStV/nexo.png" alt="" style="width: 50px; border-radius: 20%;">
+                               <img src="https://i.ibb.co/Kz9RnStV/nexo.png" alt="Nexo Seguros Logo">
                             </div>
                             <div>
                                 <h3 class="project-title">Nexo Seguros</h3>
@@ -1173,8 +1208,6 @@
                     <div class="project-preview">
                         <img src="https://i.ibb.co/ZRgbz3tt/Grava-o-de-Tela-2025-10-14-203529.gif" 
                              alt="Preview Blog Pessoal">
-                        <!-- Substitua pelo seu GIF ou imagem real: 
-                        <img src="caminho/para/blog-pessoal-demo.gif" alt="Demo Blog Pessoal"> -->
                     </div>
                     <div class="project-content">
                         <div class="project-header">
